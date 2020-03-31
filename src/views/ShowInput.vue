@@ -11,16 +11,29 @@
               v-model='switchValue2'
               active-color='orange'
               inactive-color="red"></m-switch>
+
     <div style="margin-top: 50px"></div>
     <m-radio label="1"
              v-model='gender'>男</m-radio>
     <m-radio label="0"
              v-model='gender'>女</m-radio>
-    <div style="margin-top：50px"></div>
+
+    <div style="margin:20px"></div>
     <m-radio-group v-model='gender'>
       <m-radio label="1">男</m-radio>
       <m-radio label="0">女</m-radio>
     </m-radio-group>
+
+    <div style="margin:50px"></div>
+    <m-checkbox v-model="checked">备选项</m-checkbox>
+
+    <div style="margin:20px"></div>
+    <m-checkbox-group v-model='checkList'>
+      <m-checkbox label="1">1</m-checkbox>
+      <m-checkbox label="11">2</m-checkbox>
+      <m-checkbox label="123">3</m-checkbox>
+    </m-checkbox-group>
+
   </div>
 </template>
 
@@ -32,7 +45,9 @@ export default {
       inputValue: '',
       switchValue: false,
       switchValue2: false,
-      gender: 1
+      gender: 1,
+      checked: false,
+      checkList: []
     }
   },
   methods: {
@@ -49,6 +64,7 @@ export default {
 <style scoped>
 .mm-input {
   width: 200px;
-  margin-top: 30px;
+  margin: 100px 20px;
+  overflow: auto;
 }
 </style>
